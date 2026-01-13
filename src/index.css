@@ -1,0 +1,50 @@
+:root {
+  --color-primary: #CCD5AE; /* Sage Green */
+  --color-secondary: #FEFAE0; /* Off-White */
+  --color-complementary: #D4A373; /* A warm earthy tone for accents, if needed, or stick to greens */
+  --color-accent: #E9EDC9;
+  --color-text: #4A4A4A;
+  --color-bg: #FEFAE0;
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #3A4A3A; /* Slightly darker green-gray */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.section-padding {
+  padding: 4rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
