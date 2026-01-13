@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
@@ -187,12 +187,12 @@ function Home() {
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </LanguageProvider>
   );
 }
