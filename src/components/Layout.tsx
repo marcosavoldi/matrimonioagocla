@@ -84,8 +84,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           onClick={handleKeyClick}
           style={{
             position: 'absolute',
-            bottom: '1rem',
-            left: '1rem',
+            bottom: '2rem',
+            left: '2rem',
             opacity: 0.3,
             cursor: 'pointer',
             fontSize: '0.8rem'
