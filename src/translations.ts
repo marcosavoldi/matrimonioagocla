@@ -30,6 +30,7 @@ export interface Translation {
     error: string;
     contactsTitle: string;
     contactsText: string;
+    whereWhen: string;
 }
 
 export const translations: Record<Language, Translation> = {
@@ -39,7 +40,7 @@ export const translations: Record<Language, Translation> = {
         introText: 'In attesa del nostro grande giorno, abbiamo creato questo sito dove puoi trovare tutte le informazioni necessarie.',
         confirmBy: 'Ti chiediamo di confermare la tua presenza entro il 24 Maggio 2026 compilando il form in fondo alla pagina, così da poter organizzare al meglio la giornata.',
         importantTitle: 'Informazione Importante ⚠️',
-        noKidsPolicy: 'Amiamo i vostri pargoletti, ma vogliamo informarvi che non ci sarà animazione per i più piccoli. Vi invitiamo a lasciarli ai nonni, babysitter o amici (dove sia possibile) così da godervi la lunga giornata senza pensieri e bere qualche bicchiere in più.. che sicuramente non mancherà!',
+        noKidsPolicy: 'I vostri bambini sono per noi importantissimi, ma per questa giornata non sarà prevista animazione dedicata ai più piccoli. Se possibile, vi invitiamo ad affidarli a nonni, babysitter o amici, per potervi rilassare e vivere la festa senza pensieri… brindando insieme a noi!',
         giftTitle: 'Regalo 🎁',
         giftText: 'Mentre i nostri cuori sono già colmi d’amore.. il nostro portafoglio (che piange) spera in un piccolo rinforzo per il grande giorno e oltre!',
         ibanLabel: 'IBAN',
@@ -62,7 +63,8 @@ export const translations: Record<Language, Translation> = {
         submitting: 'Invio in corso...',
         error: 'Si è verificato un errore. Riprova.',
         contactsTitle: 'Contatti 📞',
-        contactsText: 'Per qualsiasi dubbio o informazione:'
+        contactsText: 'Per qualsiasi dubbio o informazione:',
+        whereWhen: 'Dove & Quando 📍'
     },
     sq: {
         heroDate: '29 Gusht 2026',
@@ -93,6 +95,7 @@ export const translations: Record<Language, Translation> = {
         submitting: 'Duke dërguar...',
         error: 'Ndodhi një gabim. Ju lutemi provoni përsëri.',
         contactsTitle: 'Kontaktet 📞',
-        contactsText: 'Për çdo dyshim ose informacion:'
+        contactsText: 'Për çdo dyshim ose informacion:',
+        whereWhen: 'Ku & Kur 📍'
     }
 };

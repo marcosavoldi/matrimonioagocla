@@ -1,0 +1,57 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface PhotoPlaceholderProps {
+  label?: string;
+  imageSrc?: string;
+}
+
+const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc }) => {
+  if (imageSrc) {
+    return (
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        style={{ 
+          width: '100%', 
+          maxWidth: '800px', 
+          height: '400px',
+          borderRadius: '8px', 
+          overflow: 'hidden',
+          margin: '2rem auto',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+        }}
+      >
+        <img 
+          src={imageSrc} 
+          alt={label || 'Photo'} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      style={{ 
+        width: '100%', 
+        maxWidth: '800px', 
+        height: '400px', 
+        backgroundColor: '#eee', 
+        borderRadius: '8px', 
+        display: 'grid', 
+        placeItems: 'center', 
+        color: '#888',
+        margin: '2rem auto' 
+      }}
+    >
+      {label}
+    </motion.div>
+  );
+};
+
+export default PhotoPlaceholder;

@@ -1,13 +1,11 @@
 :root {
-  --color-primary: #CCD5AE; /* Sage Green */
-  --color-secondary: #FEFAE0; /* Off-White */
-  --color-complementary: #D4A373; /* A warm earthy tone for accents, if needed, or stick to greens */
-  --color-accent: #E9EDC9;
-  --color-text: #4A4A4A;
-  --color-bg: #FEFAE0;
+  --color-primary: #153243; /* Dark Blue */
+  --color-secondary: #C1BDB3; /* Light Beige/Grey */
+  --color-text: #153243;
+  --color-bg: #C1BDB3; /* Light Beige/Grey */
   
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Cormorant Garamond', serif;
 }
 
 * {
@@ -18,7 +16,8 @@
 
 body {
   font-family: var(--font-body);
-  font-size: calc(1rem * var(--font-scale, 1));
+  font-size: 1.3rem; /* Further increased size */
+  font-weight: 600; /* Increased weight for better legibility */
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;

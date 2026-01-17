@@ -9,28 +9,13 @@ import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import LanguageSelector from './components/LanguageSelector';
 import { FaMapMarkerAlt } from 'react-icons/fa'; // Ensure react-icons is installed
 
-function PhotoPlaceholder({ label }: { label: string }) {
-  return (
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      style={{ 
-        width: '100%', 
-        maxWidth: '800px', 
-        height: '400px', 
-        backgroundColor: '#eee', 
-        borderRadius: '8px', 
-        display: 'grid', 
-        placeItems: 'center', 
-        color: '#888',
-        margin: '2rem auto' 
-      }}
-    >
-      {label}
-    </motion.div>
-  );
-}
+import img2 from './assets/images/img2.webp';
+import img3 from './assets/images/img3.webp';
+import img4 from './assets/images/img4.webp';
+import img5 from './assets/images/img5.webp';
+import img6 from './assets/images/img6.webp';
+
+import PhotoPlaceholder from './components/PhotoPlaceholder';
 
 function Home() {
   const { t, hasSelectedLanguage } = useLanguage();
@@ -74,14 +59,14 @@ function Home() {
       <Hero />
       
       {/* Intro */}
-      <InfoSection>
+      <div style={{ padding: '2rem 1rem 4rem 1rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
         <p>{t.introText}</p>
         <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>{t.confirmBy}</p>
-      </InfoSection>
+      </div>
 
       {/* Photo 1 (after Hero) */}
       <div className="container" style={{ padding: '0 1rem' }}>
-        <PhotoPlaceholder label="FOTO 2 📸" />
+        <PhotoPlaceholder imageSrc={img2} />
       </div>
 
       {/* No Kids Policy */}
@@ -91,7 +76,7 @@ function Home() {
 
       {/* Photo 2 */}
       <div className="container" style={{ padding: '0 1rem' }}>
-        <PhotoPlaceholder label="FOTO 3 📸" />
+        <PhotoPlaceholder imageSrc={img3} />
       </div>
 
       {/* Registry */}
@@ -105,11 +90,11 @@ function Home() {
 
       {/* Photo 3 */}
       <div className="container" style={{ padding: '0 1rem' }}>
-        <PhotoPlaceholder label="FOTO 4 📸" />
+        <PhotoPlaceholder imageSrc={img4} />
       </div>
 
       {/* Ceremony & Reception */}
-      <InfoSection title="Dove & Quando 📍" bgColor="var(--color-secondary)" delay={0.2}>
+      <InfoSection title={t.whereWhen} bgColor="var(--color-secondary)" delay={0.2}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
           {/* Ceremony */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -148,10 +133,9 @@ function Home() {
         </div>
       </InfoSection>
 
-      {/* Photos 4 & 5 side by side */}
-      <div className="container" style={{ padding: '1rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-         <PhotoPlaceholder label="FOTO 5 📸" />
-         <PhotoPlaceholder label="FOTO 6 📸" />
+      {/* Photo 5 before Contacts */}
+      <div className="container" style={{ padding: '0 1rem', marginBottom: '2rem' }}>
+         <PhotoPlaceholder imageSrc={img5} />
       </div>
 
        {/* Contacts */}
@@ -177,6 +161,11 @@ function Home() {
           </div>
         </div>
       </InfoSection>
+
+      {/* Photo 6 after Contacts */}
+      <div className="container" style={{ padding: '0 1rem' }}>
+         <PhotoPlaceholder imageSrc={img6} />
+      </div>
 
       {/* RSVP at the end */}
       <RSVPForm />

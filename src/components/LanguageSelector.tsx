@@ -21,58 +21,82 @@ const LanguageSelector: React.FC = () => {
       zIndex: 1000,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
       alignItems: 'center',
-      gap: '2rem'
+      justifyContent: 'center',
+      gap: '3rem' // Increased overall gap for elegance, but content will be centered
     }}>
+      {/* Italian Section - Top */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem', // Compact spacing within block
+          cursor: 'pointer',
+        }}
+        onClick={() => handleSelect('it')}
+        whileHover={{ scale: 1.05 }}
+      >
+        <span style={{ fontSize: '4rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}>🇮🇹</span>
+        <div style={{ textAlign: 'center' }}>
+          <h1 style={{ 
+            fontFamily: 'var(--font-heading)', 
+            color: 'var(--color-primary)', 
+            fontSize: '2.5rem', 
+            margin: 0,
+            fontWeight: 400
+          }}>
+            BENVENUTI
+          </h1>
+          <p style={{ color: '#666', fontFamily: 'var(--font-body)', fontSize: '1.2rem', margin: '0.5rem 0 0 0' }}>Seleziona la lingua</p>
+        </div>
+      </motion.div>
+
+      {/* Divider */}
+      <motion.div 
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        style={{
+          width: '200px', // Fixed width for elegance as per image
+          height: '1px',
+          backgroundColor: 'var(--color-primary)',
+          opacity: 0.3
+        }}
+      />
+
+      {/* Albanian Section - Bottom */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem', // Compact spacing within block
+          cursor: 'pointer',
+        }}
+        onClick={() => handleSelect('sq')}
+        whileHover={{ scale: 1.05 }}
       >
-        <h1 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-primary)', fontSize: '2.5rem', textAlign: 'center' }}>
-          Benvenuti / Mirë se vini
-        </h1>
-        <p style={{ textAlign: 'center', marginTop: '1rem', color: '#666' }}>Seleziona la lingua / Zgjidhni gjuhën</p>
+        <div style={{ textAlign: 'center' }}>
+          <h1 style={{ 
+            fontFamily: 'var(--font-heading)', 
+            color: 'var(--color-primary)', 
+            fontSize: '2.5rem', 
+            margin: 0,
+            fontWeight: 400
+          }}>
+            MIRË SE VINI
+          </h1>
+          <p style={{ color: '#666', fontFamily: 'var(--font-body)', fontSize: '1.2rem', margin: '0.5rem 0 0 0' }}>Zgjidhni gjuhën</p>
+        </div>
+        <span style={{ fontSize: '4rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}>🇦🇱</span>
       </motion.div>
-
-      <div style={{ display: 'flex', gap: '3rem' }}>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => handleSelect('it')}
-          style={{
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.5rem'
-          }}
-        >
-          <span style={{ fontSize: '4rem' }}>🇮🇹</span>
-          <span style={{ fontFamily: 'var(--font-body)', fontWeight: 'bold' }}>ITALIANO</span>
-        </motion.button>
-
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => handleSelect('sq')}
-          style={{
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.5rem'
-          }}
-        >
-          <span style={{ fontSize: '4rem' }}>🇦🇱</span>
-          <span style={{ fontFamily: 'var(--font-body)', fontWeight: 'bold' }}>SHQIP</span>
-        </motion.button>
-      </div>
     </div>
   );
 };

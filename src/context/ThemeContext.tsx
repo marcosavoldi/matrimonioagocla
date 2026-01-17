@@ -39,28 +39,6 @@ const fontOptions: FontPair[] = [
     name: 'Cinzel & Cormorant',
     heading: "'Cinzel', serif",
     body: "'Cormorant Garamond', serif",
-    fontSizeScale: 1.15, // Cormorant is quite small
-  },
-  {
-    id: '2',
-    name: 'Playfair SC & Libre Baskerville',
-    heading: "'Playfair Display SC', serif",
-    body: "'Libre Baskerville', serif",
-    fontSizeScale: 0.95, // Libre is quite large
-  },
-  {
-    id: '3',
-    name: 'Cormorant SC & Lora',
-    heading: "'Cormorant SC', serif",
-    body: "'Lora', serif",
-    fontSizeScale: 1.05,
-  },
-  {
-    id: '4',
-    name: 'Bodoni Moda & EB Garamond',
-    heading: "'Bodoni Moda', serif",
-    body: "'EB Garamond', serif",
-    fontSizeScale: 1.1, // EB Garamond is slightly small
   },
 ];
 
@@ -79,45 +57,6 @@ const paletteOptions: Palette[] = [
       headingColor: '#153243',
     },
   },
-  {
-    id: 'palette-2',
-    name: '553d36 + e7d7c1',
-    colors: {
-      primary: '#553d36',      // Dark Brown
-      secondary: '#e7d7c1',    // Light Beige
-      complementary: '#a68a80', // Medium brown
-      accent: '#8c6b5d',       // Reddish brown
-      text: '#553d36',
-      bg: '#e7d7c1',
-      headingColor: '#553d36',
-    },
-  },
-  {
-    id: 'palette-3',
-    name: '6b705c + efe6d8',
-    colors: {
-      primary: '#6b705c',      // Olive Green
-      secondary: '#efe6d8',    // Off White
-      complementary: '#a5a58d', // Lighter olive
-      accent: '#ddbea9',       // Peach/Beige accent
-      text: '#6b705c',
-      bg: '#efe6d8',
-      headingColor: '#6b705c',
-    },
-  },
-  {
-    id: 'palette-4',
-    name: '2f3e46 + f3efea',
-    colors: {
-      primary: '#2f3e46',      // Dark Slate
-      secondary: '#f3efea',    // Very Light Grey
-      complementary: '#52796f', // Greenish slate
-      accent: '#84a98c',       // Lighter green
-      text: '#2f3e46',
-      bg: '#f3efea',
-      headingColor: '#2f3e46',
-    },
-  },
 ];
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -132,7 +71,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     // Set Font Variables
     root.style.setProperty('--font-heading', currentFontPair.heading);
     root.style.setProperty('--font-body', currentFontPair.body);
-    root.style.setProperty('--font-scale', currentFontPair.fontSizeScale?.toString() || '1');
 
     // Set Color Variables
     root.style.setProperty('--color-primary', currentPalette.colors.primary);
