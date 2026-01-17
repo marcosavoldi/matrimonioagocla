@@ -31,6 +31,27 @@ export interface Translation {
     contactsTitle: string;
     contactsText: string;
     whereWhen: string;
+    // Allergy Modal
+    allergiesQuestion: string;
+    yes: string;
+    no: string;
+    modalTitle: string;
+    intolerancesTitle: string;
+    allergiesTitle: string;
+    confirm: string;
+    // Intolerances
+    lactose: string;
+    gluten: string;
+    sulfites: string;
+    histamine: string;
+    // Allergies
+    treeNuts: string;
+    peanuts: string;
+    eggs: string;
+    fish: string;
+    shellfish: string;
+    other: string;
+    specify: string;
 }
 
 export const translations: Record<Language, Translation> = {
@@ -64,7 +85,26 @@ export const translations: Record<Language, Translation> = {
         error: 'Si è verificato un errore. Riprova.',
         contactsTitle: 'Contatti 📞',
         contactsText: 'Per qualsiasi dubbio o informazione:',
-        whereWhen: 'Dove & Quando 📍'
+        whereWhen: 'Dove & Quando 📍',
+        // Allergy Modal
+        allergiesQuestion: 'Hai intolleranze o allergie?',
+        yes: 'Sì',
+        no: 'No',
+        modalTitle: 'Seleziona le tue esigenze',
+        intolerancesTitle: 'Intolleranze',
+        allergiesTitle: 'Allergie',
+        confirm: 'Conferma',
+        lactose: 'Lattosio',
+        gluten: 'Glutine',
+        sulfites: 'Solfiti',
+        histamine: 'Istamina',
+        treeNuts: 'Frutta a guscio',
+        peanuts: 'Arachidi',
+        eggs: 'Uova',
+        fish: 'Pesce',
+        shellfish: 'Crostacei',
+        other: 'Altro (specificare)',
+        specify: 'Specificare...'
     },
     sq: {
         heroDate: '29 Gusht 2026',
@@ -96,6 +136,25 @@ export const translations: Record<Language, Translation> = {
         error: 'Ndodhi një gabim. Ju lutemi provoni përsëri.',
         contactsTitle: 'Kontaktet 📞',
         contactsText: 'Për çdo dyshim ose informacion:',
-        whereWhen: 'Ku & Kur 📍'
+        whereWhen: 'Ku & Kur 📍',
+        // Allergy Modal
+        allergiesQuestion: 'A keni intolerancë ose alergji?',
+        yes: 'Po',
+        no: 'Jo',
+        modalTitle: 'Zgjidhni nevojat tuaja',
+        intolerancesTitle: 'Intolerancat',
+        allergiesTitle: 'Alergjitë',
+        confirm: 'Konfirmo',
+        lactose: 'Laktozë',
+        gluten: 'Gluten',
+        sulfites: 'Sulfite',
+        histamine: 'Histaminë',
+        treeNuts: 'Fruta të Thata / Arra',
+        peanuts: 'Kikirikë',
+        eggs: 'Vezë',
+        fish: 'Peshk',
+        shellfish: 'Fruta Deti',
+        other: 'Tjetër (specifikoni)',
+        specify: 'Specifikoni...'
     }
 };

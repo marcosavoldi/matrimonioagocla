@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { FaKey } from 'react-icons/fa';
+import AdminModal from './AdminModal';
 
 
 interface LayoutProps {
@@ -8,6 +10,20 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { setLanguage, language } = useLanguage();
+  const [showAdminModal, setShowAdminModal] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleKeyClick = () => {
+    const newCount = clickCount + 1;
+    if (newCount === 5) {
+      setShowAdminModal(true);
+      setClickCount(0);
+    } else {
+      setClickCount(newCount);
+      // Reset count after 2 seconds if not reached 5
+      setTimeout(() => setClickCount(0), 2000);
+    }
+  };
 
   return (
     <div className="layout">
@@ -57,11 +73,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         color: 'white',
         padding: '2rem',
         textAlign: 'center',
-        marginTop: '4rem'
+        marginTop: '4rem',
+        position: 'relative' // Needed for absolute positioning of key
       }}>
         <p>© 2026 Claudia & Simone</p>
         <p style={{fontSize: '0.8rem', marginTop: '0.5rem'}}>Created with ❤️</p>
+        
+        {/* Admin Key */}
+        <div 
+          onClick={handleKeyClick}
+          style={{
+            position: 'absolute',
+            bottom: '1rem',
+            left: '1rem',
+            opacity: 0.3,
+            cursor: 'pointer',
+            fontSize: '0.8rem'
+          }}
+        >
+          <FaKey />
+        </div>
       </footer>
+
+      {/* Admin Modal */}
+      <AdminModal isOpen={showAdminModal} onClose={() => setShowAdminModal(false)} />
     </div>
   );
 };
