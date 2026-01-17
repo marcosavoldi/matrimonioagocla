@@ -50,27 +50,21 @@ const Hero: React.FC = () => {
         style={{
           width: '100%',
           maxWidth: '600px',
-          height: '400px',
-          backgroundColor: '#ddd',
-          borderRadius: '8px',
+          height: '500px', // Taller for portrait elegance
+          backgroundColor: '#f4f4f4',
+          border: '1px solid var(--color-primary)',
+          borderRadius: '4px', // Less rounded
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
           objectFit: 'cover'
         }}
       >
-        <span style={{ color: '#888' }}>FOTO PRINCIPALE</span>
+        <span style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-heading)', fontSize: '1.2rem', letterSpacing: '0.1em' }}>FOTO SPOSI</span>
       </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        style={{ marginTop: '2rem' }}
-      >
-        <p>{t.scrollDown}</p>
-      </motion.div>
+
+
     </div>
   );
 };

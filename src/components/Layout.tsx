@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import ThemeSwitcher from './ThemeSwitcher';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,6 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="layout">
+      <ThemeSwitcher />
       {/* Header with Language Switcher */}
       <header style={{
         position: 'absolute',

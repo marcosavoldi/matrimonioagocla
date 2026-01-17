@@ -18,10 +18,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   const completeSelection = () => setHasSelectedLanguage(true);
 
   return (
-    <LanguageContext.Provider value={{ 
-      language, 
-      setLanguage, 
-      t: translations[language], 
+    <LanguageContext.Provider value={{
+      language,
+      setLanguage,
+      t: translations[language],
       hasSelectedLanguage,
       completeSelection
     }}>

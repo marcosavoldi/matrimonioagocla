@@ -35,7 +35,7 @@ export interface Translation {
 export const translations: Record<Language, Translation> = {
     it: {
         heroDate: '29 Agosto 2026',
-        scrollDown: 'Scorri per i dettagli ↓',
+        scrollDown: '',
         introText: 'In attesa del nostro grande giorno, abbiamo creato questo sito dove puoi trovare tutte le informazioni necessarie.',
         confirmBy: 'Ti chiediamo di confermare la tua presenza entro il 24 Maggio 2026 compilando il form in fondo alla pagina, così da poter organizzare al meglio la giornata.',
         importantTitle: 'Informazione Importante ⚠️',
@@ -66,7 +66,7 @@ export const translations: Record<Language, Translation> = {
     },
     sq: {
         heroDate: '29 Gusht 2026',
-        scrollDown: 'Rrëshqitni për detaje ↓',
+        scrollDown: '',
         introText: 'Në pritje të ditës sonë të madhe, kemi krijuar këtë faqe ku mund të gjeni të gjitha informacionet e nevojshme.',
         confirmBy: 'Ju lutemi të konfirmoni praninë tuaj deri më 24 Maj 2026 duke plotësuar formularin në fund të faqes, në mënyrë që të organizojmë ditën sa më mirë.',
         importantTitle: 'Informacion i Rëndësishëm ⚠️',
