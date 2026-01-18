@@ -12,7 +12,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'; // Ensure react-icons is instal
 import img2 from './assets/images/img2.webp';
 import img3 from './assets/images/img3.webp';
 import img4 from './assets/images/img4.webp';
-import img5 from './assets/images/img5.webp';
+import img1 from './assets/images/img1.webp';
 import img6 from './assets/images/img6.webp';
 
 import PhotoPlaceholder from './components/PhotoPlaceholder';
@@ -135,7 +135,7 @@ function Home() {
 
       {/* Photo 5 before Contacts */}
       <div className="container" style={{ padding: '0 1rem', marginBottom: '2rem' }}>
-         <PhotoPlaceholder imageSrc={img5} />
+         <PhotoPlaceholder imageSrc={img1} autoHeight={true} />
       </div>
 
        {/* Contacts */}
@@ -155,6 +155,11 @@ function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Simone</h4>
+            <p style={{ marginBottom: '0.3rem' }}>
+              <a href="mailto:aho.aghino@gmail.com?subject=Richiesta%20informazioni%20Matrimonio%20Claudia%26Simone" style={{ textDecoration: 'underline' }}>
+                aho.aghino@gmail.com
+              </a>
+            </p>
             <p>
               <a href="tel:+393665351245" style={{ textDecoration: 'none' }}>+39 366 535 1245</a>
             </p>

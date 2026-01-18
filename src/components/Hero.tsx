@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import img1 from '../assets/images/img1.webp';
+import img5 from '../assets/images/img5.webp';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
         }}
       >
         <img 
-          src={img1} 
+          src={img5} 
           alt="Claudia & Simone" 
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />

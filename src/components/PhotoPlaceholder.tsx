@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 interface PhotoPlaceholderProps {
   label?: string;
   imageSrc?: string;
+  autoHeight?: boolean;
 }
 
-const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc }) => {
+const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc, autoHeight = false }) => {
   if (imageSrc) {
     return (
       <motion.div 
@@ -16,7 +17,7 @@ const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc }) 
         style={{ 
           width: '100%', 
           maxWidth: '800px', 
-          height: '400px',
+          height: autoHeight ? 'auto' : '400px',
           borderRadius: '8px', 
           overflow: 'hidden',
           margin: '2rem auto',
@@ -26,7 +27,12 @@ const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc }) 
         <img 
           src={imageSrc} 
           alt={label || 'Photo'} 
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ 
+            width: '100%', 
+            height: autoHeight ? 'auto' : '100%', 
+            objectFit: autoHeight ? 'contain' : 'cover',
+            display: 'block' 
+          }}
         />
       </motion.div>
     );
