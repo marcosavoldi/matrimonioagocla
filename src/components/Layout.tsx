@@ -13,15 +13,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [clickCount, setClickCount] = useState(0);
 
+  // Ref for timeout to clear it properly
+  const timeoutRef = React.useRef<any>(null);
+
   const handleKeyClick = () => {
+    // Clear existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     const newCount = clickCount + 1;
-    if (newCount === 5) {
+    
+    if (newCount >= 5) {
       setShowAdminModal(true);
       setClickCount(0);
     } else {
       setClickCount(newCount);
-      // Reset count after 2 seconds if not reached 5
-      setTimeout(() => setClickCount(0), 2000);
+      // Reset count after 2 seconds of inactivity
+      timeoutRef.current = setTimeout(() => {
+        setClickCount(0);
+      }, 2000);
     }
   };
 
@@ -79,20 +90,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <p>© 2026 Claudia & Simone</p>
         <p style={{fontSize: '0.8rem', marginTop: '0.5rem'}}>Created with ❤️</p>
         
-        {/* Admin Key */}
-        <div 
+        {/* Admin Key Button */}
+        <button 
           onClick={handleKeyClick}
           style={{
             position: 'absolute',
-            bottom: '2rem',
-            left: '2rem',
-            opacity: 0.3,
+            bottom: '1rem',
+            left: '1rem',
+            background: 'rgba(255, 255, 255, 0.2)',
+            border: 'none',
+            borderRadius: '50%',
+            width: '40px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
             cursor: 'pointer',
-            fontSize: '0.8rem'
+            opacity: 0.6,
+            transition: 'opacity 0.2s',
+            zIndex: 10
           }}
         >
-          <FaKey />
-        </div>
+          <FaKey size={14} />
+        </button>
       </footer>
 
       {/* Admin Modal */}

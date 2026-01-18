@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #153243; /* Dark Blue */
   --color-secondary: #C1BDB3; /* Light Beige/Grey */
