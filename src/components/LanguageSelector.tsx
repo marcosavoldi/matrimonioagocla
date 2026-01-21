@@ -15,15 +15,19 @@ const LanguageSelector: React.FC = () => {
       position: 'fixed',
       top: 0,
       left: 0,
+      right: 0,
+      bottom: 0,
+      height: '100dvh', // Use dynamic viewport height for mobile
       width: '100vw',
-      height: '100vh',
       backgroundColor: 'var(--color-bg)',
-      zIndex: 1000,
+      zIndex: 10000, // Increased z-index
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: '3rem' // Increased overall gap for elegance, but content will be centered
+      gap: '3rem',
+      overflow: 'hidden', // Prevent scrolling
+      touchAction: 'none' // Prevent touch interaction with underlying content
     }}>
       {/* Italian Section - Top */}
       <motion.div
