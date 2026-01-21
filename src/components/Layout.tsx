@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="layout">
+    <div className="layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
       {/* Header with Language Switcher */}
       <header style={{
@@ -75,7 +75,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </button>
       </header>
       
-      <main>
+      <main style={{ flex: 1 }}>
         {children}
       </main>
 
