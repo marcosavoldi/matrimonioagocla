@@ -156,8 +156,8 @@ function Home() {
           <div style={{ textAlign: 'center' }}>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Simone</h4>
             <p style={{ marginBottom: '0.3rem' }}>
-              <a href="mailto:aho.aghino@gmail.com?subject=Richiesta%20informazioni%20Matrimonio%20Claudia%26Simone" style={{ textDecoration: 'underline' }}>
-                aho.aghino@gmail.com
+              <a href="mailto:ago.aghino@gmail.com?subject=Richiesta%20informazioni%20Matrimonio%20Claudia%26Simone" style={{ textDecoration: 'underline' }}>
+                ago.aghino@gmail.com
               </a>
             </p>
             <p>
