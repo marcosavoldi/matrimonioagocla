@@ -49,23 +49,11 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        style={{
-          width: '100%',
-          maxWidth: '100%', // Full width
-          height: 'auto', // Adapt to image height
-          border: '1px solid var(--color-primary)',
-          borderRadius: '4px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-          overflow: 'hidden'
-        }}
+        className="hero-image-wrapper"
       >
         <img 
           src={img5} 
           alt="Claudia & Simone" 
-          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </motion.div>
 

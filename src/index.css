@@ -52,3 +52,35 @@ button {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* Hero Image Responsive Styles */
+.hero-image-wrapper {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .hero-image-wrapper {
+    max-width: 600px; /* Limit width on desktop to prevent huge height */
+    max-height: 80vh; /* Also limit height directly just in case */
+  }
+  
+  .hero-image-wrapper img {
+    object-fit: contain;
+    max-height: 80vh;
+  }
+}
