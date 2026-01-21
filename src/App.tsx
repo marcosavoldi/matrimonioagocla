@@ -169,7 +169,7 @@ function Home() {
 
       {/* Photo 6 after Contacts */}
       <div className="container" style={{ padding: '0 1rem' }}>
-         <PhotoPlaceholder imageSrc={img6} />
+         <PhotoPlaceholder imageSrc={img6} autoHeight={true} />
       </div>
 
       {/* RSVP at the end */}

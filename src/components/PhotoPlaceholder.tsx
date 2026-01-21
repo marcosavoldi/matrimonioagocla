@@ -15,23 +15,26 @@ const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({ label, imageSrc, au
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         style={{ 
-          width: '100%', 
+          width: autoHeight ? 'fit-content' : '100%', 
           maxWidth: '800px', 
           height: autoHeight ? 'auto' : '400px',
           borderRadius: '8px', 
           overflow: 'hidden',
           margin: '2rem auto',
-          boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+          boxShadow: autoHeight ? 'none' : '0 4px 15px rgba(0,0,0,0.1)'
         }}
       >
         <img 
           src={imageSrc} 
           alt={label || 'Photo'} 
           style={{ 
-            width: '100%', 
+            width: autoHeight ? 'auto' : '100%', 
+            maxWidth: '100%',
             height: autoHeight ? 'auto' : '100%', 
+            maxHeight: autoHeight ? '70vh' : 'none',
             objectFit: autoHeight ? 'contain' : 'cover',
-            display: 'block' 
+            display: 'block',
+            margin: '0 auto'
           }}
         />
       </motion.div>

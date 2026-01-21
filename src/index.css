@@ -57,12 +57,13 @@ button {
 .hero-image-wrapper {
   width: 100%;
   height: auto;
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: none;
   overflow: hidden;
   margin: 0 auto;
 }
